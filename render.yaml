@@ -3,9 +3,10 @@ services:
     name: taskforge-api
     runtime: node
     rootDir: backend
-    buildCommand: npm install && npm run build
+    buildCommand: npm install && npx prisma generate && npm run build
     startCommand: npm start
     healthCheckPath: /health
+
     envVars:
       - key: NODE_ENV
         value: production
