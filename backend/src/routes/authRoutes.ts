@@ -11,6 +11,10 @@ router.post('/register', register);
 // POST /api/auth/login
 router.post('/login', login);
 
+router.get('/test', (_req, res) => {
+  res.json({ message: 'Auth routes working' });
+});
+
 // Add this line to your router
 router.post('/reset-password', authenticateToken, resetPassword);
 
