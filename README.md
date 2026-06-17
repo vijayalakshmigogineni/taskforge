@@ -1,162 +1,106 @@
-# 📝 TaskForge - Full Stack Todo Management Application
+# 🚀 TaskForge
 
-A modern full-stack Todo Management Application built with React, TypeScript, Express, Prisma, PostgreSQL, and JWT Authentication.
+A full-stack task management application built with React, TypeScript, Express.js, Prisma, PostgreSQL, and JWT Authentication.
 
-The application allows users to securely register, log in, manage personal tasks, set priorities, search todos, filter by status, and track completion progress.
+## 🌐 Live Demo
 
----
+Frontend:
+https://taskforge-gray-ten.vercel.app/
 
-## 🚀 Features
-
-### Authentication
-
-* User Registration
-* User Login
-* JWT-Based Authentication
-* Protected Routes
-* Password Reset
-
-### Todo Management
-
-* Create Todos
-* Update Todos
-* Delete Todos
-* Mark Todos as Complete
-* Priority Levels:
-
-  * LOW
-  * MEDIUM
-  * HIGH
-
-### Search & Filtering
-
-* Search Todos by Title
-* Filter by Completion Status
-* Filter by Priority
-* Pagination Support
-
-### Security
-
-* Password Hashing using bcrypt
-* JWT Authentication
-* Protected API Routes
-* CORS Configuration
+Backend:
+https://taskforge-ox12.onrender.com
 
 ---
 
-## 🏗️ Tech Stack
+## ✨ Features
+
+- User Registration
+- User Login
+- JWT Authentication
+- Create Todo
+- Update Todo
+- Delete Todo
+- Search Todos
+- Filter by Priority
+- PostgreSQL Database
+- Responsive UI
+
+---
+
+## 🛠 Tech Stack
 
 ### Frontend
-
-* React 19
-* TypeScript
-* Vite
-* Tailwind CSS
-* Radix UI
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
 ### Backend
-
-* Node.js
-* Express.js
-* TypeScript
-* Prisma ORM
+- Node.js
+- Express.js
+- TypeScript
+- Prisma ORM
+- JWT Authentication
 
 ### Database
-
-* PostgreSQL
-* Neon Database
-
-### Authentication
-
-* JWT (JSON Web Tokens)
-* bcryptjs
+- PostgreSQL (Neon)
 
 ### Deployment
-
-* Frontend: Vercel
-* Backend: Render
-* Database: Neon
+- Vercel (Frontend)
+- Render (Backend)
 
 ---
 
-## 📁 Project Structure
+## 📦 Run Locally
 
-```text
-todo-application/
-│
-├── backend/
-│   ├── prisma/
-│   ├── src/
-│   │   ├── controllers/
-│   │   ├── middlewares/
-│   │   ├── routes/
-│   │   └── utils/
-│   └── app.ts
-│
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   ├── lib/
-│   │   ├── App.tsx
-│   │   └── main.tsx
-│
-└── README.md
+### 1. Fork Repository
+
+Click the Fork button on GitHub.
+
+### 2. Clone Repository
+
+```bash
+git clone https://github.com/<your-username>/taskforge.git
+cd taskforge
 ```
 
 ---
 
-## ⚙️ Environment Variables
+## 🔧 Backend Setup
 
-### Backend (.env)
+Navigate to backend:
+
+```bash
+cd backend
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Create `.env` file:
 
 ```env
 DATABASE_URL=your_neon_database_url
 JWT_SECRET=your_secret_key
 CLIENT_URL=http://localhost:5173
-PORT=5000
 ```
 
-### Frontend (.env)
-
-```env
-VITE_API_URL=http://localhost:5000/api
-```
-
----
-
-## 🔧 Local Setup
-
-### Clone Repository
-
-```bash
-git clone <repository-url>
-cd todo-application
-```
-
----
-
-## Backend Setup
-
-```bash
-cd backend
-
-npm install
-```
-
-Create:
-
-```env
-backend/.env
-```
-
-Run Prisma:
+Generate Prisma Client:
 
 ```bash
 npx prisma generate
-npx prisma db push
 ```
 
-Start Backend:
+Run migrations:
+
+```bash
+npx prisma migrate deploy
+```
+
+Start backend:
 
 ```bash
 npm run dev
@@ -170,25 +114,27 @@ http://localhost:5000
 
 ---
 
-## Frontend Setup
+## 🎨 Frontend Setup
+
+Open another terminal:
 
 ```bash
 cd frontend
+```
 
+Install dependencies:
+
+```bash
 npm install
 ```
 
-Create:
-
-```env
-frontend/.env
-```
+Create `.env`:
 
 ```env
 VITE_API_URL=http://localhost:5000/api
 ```
 
-Start Frontend:
+Start frontend:
 
 ```bash
 npm run dev
@@ -202,62 +148,25 @@ http://localhost:5173
 
 ---
 
-## API Endpoints
+## 📸 Screenshots
 
-### Authentication
+### Login Page
 
-```http
-POST /api/auth/register
-POST /api/auth/login
-POST /api/auth/reset-password
-```
+(Add Screenshot)
 
-### Todos
+### Dashboard
 
-```http
-GET    /api/todos
-POST   /api/todos
-PUT    /api/todos/:id
-DELETE /api/todos/:id
-```
+(Add Screenshot)
+
+### Todo Management
+
+(Add Screenshot)
 
 ---
 
-## Deployment Architecture
+## 👨‍💻 Author
 
-```text
-React Frontend (Vercel)
-           │
-           ▼
-Node.js + Express API (Render)
-           │
-           ▼
-PostgreSQL Database (Neon)
-```
+Vijayalakshmi Gogineni
 
----
-
-## Future Enhancements
-
-* Refresh Tokens
-* Email Verification
-* Forgot Password via Email
-* Dark Mode
-* Due Dates
-* Categories & Tags
-* Dashboard Analytics
-* Team Collaboration
-
----
-
-## Author
-
-Built using:
-
-* React
-* TypeScript
-* Node.js
-* Express
-* Prisma
-* PostgreSQL
-* JWT Authentication
+GitHub:
+https://github.com/vijayalakshmigogineni
